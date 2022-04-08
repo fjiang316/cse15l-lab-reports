@@ -19,3 +19,5 @@ create a helloworld file as following
 System.out.println("Hello, world");
 System.out.println("Hello, cse 15l");
 ```
+[Lab Report 1](lab-report-1-week-2.html)
+[Lab Report 1](https://fjiang316.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
