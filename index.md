@@ -3,7 +3,7 @@ This is *cse 15l*.
 This is **lab 2**.
 ## Part 1
 [my github webpage](https://fjiang316.github.io/cse15l-lab-reports/)
-![github image](https://www.google.com/urlsa=i&url=https%3A%2F%2Faidanfinn.com%2F%3Fp%3D22607&psig=AOvVaw1Oi3W56LaJyWqKzjk1kJ6y&ust=1649525677845000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCNjyo5SAhfcCFQAAAAAdAAAAABAD)
+![github image](https://i.pinimg.com/originals/b1/3f/2d/b13f2ddf6fa570284a9b9e50cbebed5c.png)
 > The github is a web service for sharing and writing code.
 * step 1
 * step 2 
