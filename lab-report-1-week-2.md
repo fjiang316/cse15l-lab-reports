@@ -15,3 +15,8 @@ For this step, we are going to gain remote access to the ieng6 server by clickin
 ## Step 3 - Trying Some Commands
 Now that we are logged in to the remote server, we can make operations on the remote computer with commands through the terminal. Some basic commands are: `ls` for showing the visible files in the current directory, `ls -a` for showing both visible and hidden files, `ls -lat` for showing all files with date, size, type, etc., `cd` for changing directory, `pwd` for showing the current directory, `cat` for showing the content of a file, and `cp` for making a copy of a file. The following are some examples for executing some of those commands, for your reference.
 
+![image3](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(2).png?raw=true)
+
+## Step 4 - Moving Files With `scp`
+To securely make a copy of a file from your local computer to the remote computer, we use the `scp` command on your local computer’s terminal, which stands for “secure copy”. The way it should be typed in a terminal is `scp <your_file_name> cs15lsp22zz@ieng6.ucsd.edu:~/` where the file name can be of any file and the zz should be replaced with your personal account suffix. After that, if no keys have been generated, the user will be prompted to type in the passwords, and upon hitting enter, the file will be copied into the remote computer’s home directory. The process is shown below with an example file.
+
