@@ -49,5 +49,15 @@ The key's randomart image is:
 |      o S = *.B. |
 |       = = O.*.*+|
 ```
+![image5](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(7).png?raw=true)
 
- 
+* To finish, copy the public key into the `.ssh` directory of account in server by logging in to server first, then enter `mkdir -ssh`
+
+## Step 6 - Optimizing Remote Running
+To make the experience of operating on remote server more soomthly, here are some stratigies to minimize the steps:
+* **Logging in and command at the same time**: Attach commands at then end of an `ssh` command inside quotation marks. (Ex. `ssh cs15lsp22zz@ieng6.ucsd.edu "ls"`)
+* **Running multiple commands at the same time**: use semicolon to seperate different commands. (Ex. `javac fileA.java fileB.java; java fileA`)
+* **Short cut for reusing previous command**: Hit up-arrow to recall previous commands, useful when the command is long and wordy. (Ex. hit up-arrow to get log-in command `ssh cs15lsp22zz@ieng6.ucsd.edu` to save time by avoiding typing it again)
+
+Here's an example:
+
