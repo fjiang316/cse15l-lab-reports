@@ -23,4 +23,31 @@ To securely make a copy of a file from your local computer to the remote compute
 ![image4](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(5).png?raw=true)
 
 ## Step 5 - Setting an SSH Key
-In this step, we are going to set up an SSH key and store the public key in the server and the private key in the local computer, so that afterwards whenever we want to access the remote computer, we will not be prompted to enter passwords again. 
+In this step, we are going to set up an SSH key and store the public key in the server and the private key in the local computer, so that afterwards whenever we want to access the remote computer, we will not be prompted to enter passwords again. On the local computer’s terminal, the process is as following: 
+* Enter `ssh -keygen`, the computer will reply 
+```
+Generating public/private rsa key pair. Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa):
+```
+* Then enter in format `/Users/<user-name>/.ssh/id_rsa`
+* After that, hit enter when prompted 
+```
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again:
+```
+* The computer will show the following:
+```
+Your identification has been saved in /Users/<user-name>/.ssh/id_rsa.
+Your public key has been saved in /Users/<user-name>/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:jZaZH6fI8E2I1D35hnvGeBePQ4ELOf2Ge+G0XknoXp0 <user-name>@<system>.local
+The key's randomart image is:
++---[RSA 3072]----+
+|                 |
+|       . . + .   |
+|      . . B o .  |
+|     . . B * +.. |
+|      o S = *.B. |
+|       = = O.*.*+|
+```
+
+ 
