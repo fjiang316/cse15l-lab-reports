@@ -60,4 +60,4 @@ To make the experience of operating on remote server more soomthly, here are som
 * **Short cut for reusing previous command**: Hit up-arrow to recall previous commands, useful when the command is long and wordy. (Ex. hit up-arrow to get log-in command `ssh cs15lsp22zz@ieng6.ucsd.edu` to save time by avoiding typing it again)
 
 Here's an example:
-
+![image6](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(9).png?raw=true)
