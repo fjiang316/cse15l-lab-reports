@@ -9,3 +9,9 @@ In this step, we are going to set up the environment for accessing the remote se
 
 ## Step 2 - Remote Connecting
 For this step, we are going to gain remote access to the ieng6 server by clicking on the `terminal` - `new terminal`. To gain remote access, it is required to type in the following ssh command with account name and host server name in the terminal: `ssh cs15lsp22zz@ieng6.ucsd.edu`, where `zz` should be replace by your peronalized account suffix. After that, if there’s no key being generated, it will prompt the user to enter the password for the account, upon hitting enter, you should see something similar to the following image.
+
+![image 2](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(1).png?raw=true)
+
+## Step 3 - Trying Some Commands
+Now that we are logged in to the remote server, we can make operations on the remote computer with commands through the terminal. Some basic commands are: `ls` for showing the visible files in the current directory, `ls -a` for showing both visible and hidden files, `ls -lat` for showing all files with date, size, type, etc., `cd` for changing directory, `pwd` for showing the current directory, `cat` for showing the content of a file, and `cp` for making a copy of a file. The following are some examples for executing some of those commands, for your reference.
+
