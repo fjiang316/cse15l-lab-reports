@@ -20,3 +20,7 @@ Now that we are logged in to the remote server, we can make operations on the re
 ## Step 4 - Moving Files With `scp`
 To securely make a copy of a file from your local computer to the remote computer, we use the `scp` command on your local computer’s terminal, which stands for “secure copy”. The way it should be typed in a terminal is `scp <your_file_name> cs15lsp22zz@ieng6.ucsd.edu:~/` where the file name can be of any file and the zz should be replaced with your personal account suffix. After that, if no keys have been generated, the user will be prompted to type in the passwords, and upon hitting enter, the file will be copied into the remote computer’s home directory. The process is shown below with an example file.
 
+![image4](https://github.com/fjiang316/cse15l-lab-reports/blob/main/2022-04-01%20(5).png?raw=true)
+
+## Step 5 - Setting an SSH Key
+In this step, we are going to set up an SSH key and store the public key in the server and the private key in the local computer, so that afterwards whenever we want to access the remote computer, we will not be prompted to enter passwords again. 
