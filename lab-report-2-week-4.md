@@ -41,3 +41,13 @@ The brief view of the content in markdown format is as following:
 ```
 
 ### Symptom in Previous Version
+![bug 2 symptom](https://github.com/fjiang316/cse15l-lab-reports/blob/main/bug%202%20symp.png?raw=true)
+
+### Reason Behind Symptom
+In the previous version, the algorithm checks for the open bracket, then the close bracket after it. This means for the test case above, when there's another link inside the bracket, the previous code will detect the link inside the bracket as the link, which results in wrong behavior. In the fixed version, we checked whether there's another bracket inside the bracket by checking if there's another open bracket between the open bracket and the close bracket. If this is the case we update the close bracket to the next one. The process is as following:
+```
+int openBracket2 = markdown.indexOf("[", openBracket+1);
+            if (openBracket2 < closeBracket && openBracket2 != -1) {
+                closeBracket = markdown.indexOf("]", closeBracket+1);
+            }
+```
