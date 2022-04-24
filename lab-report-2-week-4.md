@@ -65,3 +65,12 @@ The brief overview of the content is as following:
 ```
 
 ### Symptom in Previous Version
+![bug 3 symptom](https://github.com/fjiang316/cse15l-lab-reports/blob/main/bug%203%20symp.png?raw=true)
+
+### Reason Behind Symptom
+In the previous version, we only check the position of open parenthesis and close parenthesis, then append the substring between the two index to the resulting list without checking if the content is a valid link. Therefore, in the sample test file above, `[a link on the first line]` is returned, which is not a valid link. In the fixed version of the code, we contains if statement to check whether the link is valid by the line ```
+if (link.contains(" ")) {
+                continue;
+            }
+```
+Therefore, invalid link will not be added to the resulting list.
