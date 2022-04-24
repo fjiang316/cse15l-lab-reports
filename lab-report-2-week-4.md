@@ -51,3 +51,6 @@ int openBracket2 = markdown.indexOf("[", openBracket+1);
                 closeBracket = markdown.indexOf("]", closeBracket+1);
             }
 ```
+
+## Third Error (Wrong Behavior - Invalid Link)
+### Code After Fix
