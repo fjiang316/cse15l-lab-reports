@@ -26,3 +26,18 @@ The bug within the original code is that it doesn't consider the case when the o
 
 ## Second Error (Wrong Behavior - Link Inside Bracket)
 ### Code After Change
+
+![bug 2 fix](https://github.com/fjiang316/cse15l-lab-reports/blob/main/bug%202%20fix.png?raw=true)
+
+### Failure Inducing Input
+> Test case file that induce this change to happen: [failed test case](https://github.com/fjiang316/markdown-parser-fork/blob/main/new-test.md)
+
+The brief view of the content in markdown format is as following:
+```
+# Title
+
+[link1](link1.com)
+[[link2](link2.com)](real_link2.com)
+```
+
+### Symptom in Previous Version
