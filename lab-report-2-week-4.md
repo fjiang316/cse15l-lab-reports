@@ -8,6 +8,18 @@ In this lab report, we are going to demonstrate the process of fixing bugs withi
 ![bug1](https://github.com/fjiang316/cse15l-lab-reports/blob/main/bug%201%20fix,%20index%20out%20of%20bound.png?raw=true)
 
 ### Failure Inducing Input
-> Test case file that induce this change to happen: [failed test case](https://github.com/fjiang316/markdown-parser-fork/blob/main/test.md)
+> Test case file that induce this change to happen: [failed test case](https://github.com/fjiang316/markdown-parser-fork/blob/main/test2.md)
+
+The brief view of the content in markdown format is as following:
+```
+# Title
+
+(link 1)
+(link 2)
+```
 
 ### Symptom in Previous Version
+![bug1 Symptom](https://github.com/fjiang316/cse15l-lab-reports/blob/main/bug%201%20symptom.png?raw=true)
+
+### Reason Behind Symptom
+The bug within the original code is that it doesn't consider the case when the open bracket is not found after the specific index. When the currentIndex is valid and the while loop proceed, it will execute the line that find the index of the open bracket. If the open bracket cannot be found (like in the test case above), the value for openBracket will be -1. This means that if we don't check the value of openBracket at this point and break from the loop, the order `int closeBracket = markdown.indexOf("]", openBracket);` will proceed, which will return the index out of bound error.
