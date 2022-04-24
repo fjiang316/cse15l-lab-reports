@@ -21,3 +21,4 @@ System.out.println("Hello, cse 15l");
 ```
 ## Feiyang's Lab reports
 * [Lab Report 1](https://fjiang316.github.io/cse15l-lab-reports/lab-report-1-week-2.html)
+* [Lab Report 2](https://fjiang316.github.io/cse15l-lab-reports/lab-report-2-week-4.html)
