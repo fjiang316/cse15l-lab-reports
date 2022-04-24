@@ -54,3 +54,14 @@ int openBracket2 = markdown.indexOf("[", openBracket+1);
 
 ## Third Error (Wrong Behavior - Invalid Link)
 ### Code After Fix
+![bug 3 fix](https://github.com/fjiang316/cse15l-lab-reports/blob/main/big%203%20fix.png?raw=true)
+
+### Failure Inducing Input
+> Test case file that induce this change to happen: [failed test case](https://github.com/fjiang316/markdown-parser-fork/blob/main/test-file6.md)
+The brief overview of the content is as following:
+```
+[](a link)
+[
+```
+
+### Symptom in Previous Version
