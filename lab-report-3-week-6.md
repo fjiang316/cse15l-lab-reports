@@ -4,18 +4,28 @@ The purpose of the lab report is to demostrate ways to build easier connections 
 
 ## Streamlining `ssh` Configuration
 ### My .ssh/config File
+Note: The config file enables us to log in to the remote server using an alias without typing the lengthy account name. It is done by creating a file inside the `.ssh` folder of local computer.
 ![config_file](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport3%20part1%20file.png?raw=true)
 ### Logging in with Alias `ieng6`
+Note: The command to do so is `ssh <your alias>`.
 ![login](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport3%20part1%20ssh.png?raw=true)
 ### Copying one File with `scp` and Alias `ieng6`
+Note: The corresponding command is `scp <file name> <your alias>:<location>`
 ![copying](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport%203%20part%201%20scp.png?raw=true)
 
 ## Setup Github Access from ieng6 Server
 ### Public Key Stored in Github User Account
+Note: To set up the key, follow the tutorial [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
 ![public key](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport3%20part2%20key%20update.png?raw=true)
 ### Private Key Stored in Remote User Account
 ![private key](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport3%20part2%20private%20user%20account.png?raw=true)
 ### Commit and Push Changes from ieng6 Server to Github Using Git Commands
+Note: The general git command you should use after made a change in the directory is:
+1. `git status` to check the changes 
+2. `git add <file name>` if there's file applicable
+3. then `git commit -m "<your message>"` to commit the change
+4. finially `git push origin main` to push the change to github.
+
 ![push origin](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport3%20part2%20push.png?raw=true)
 ### The Resulting Commit on Github Webpage
 > Link to the commit: [click here](https://github.com/fjiang316/markdown-parser-fork/commit/b2d072d55c353d767aed03bd11cf2edbd5fbae9c)
