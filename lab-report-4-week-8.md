@@ -9,3 +9,37 @@
 ### Desired Output
 The first line does not produce any link, the last three lines produce valid links. The output should be `['google.com, google.com, ucsd.edu]`
 ### Test Designed for Snippet 1
+The test I designed for testing snippet 1 is the same for both repositories. It is as following:
+```
+@Test
+    public void testSnippet1() throws IOException {
+        Path fileName = Path.of("Snippet1.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> result = MarkdownParse.getLinks(content);
+        assertEquals(List.of("`google.com", "google.com", "ucsd.edu"), result);
+    }
+```
+### Result of the Test
+- **My MarkdownParse test file**: The test *failed* for line 54 of the test file. The details are as shown in the following screenshot.
+![test result for snippet 1](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet1%20my%20test%20output.png?raw=true)
+- **Reviewed MarkdownParse test file**: The test *failed* for line 218 of the test file. The details are as shown in the following screenshot.
+![result for snippet 1](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet1%20reviewed%20repo%20result.png?raw=true)
+
+## Snippet 2
+### Desired Output
+All three lines in the snippet should produce valid links. The resulting output should be `[a.com, a.com(()), example.com]`.
+### Test Designed for Snippet 2
+The test I designed for testing snippet 2 is the same for both repositories. It is as following:
+```
+@Test
+    public void testSnippet2() throws IOException {
+        Path fileName = Path.of("Snippet2.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> result = MarkdownParse.getLinks(content);
+        assertEquals(List.of("a.com", "a.com(())", "example.com"), result);
+    }
+```
+### Result of the Test
+- **My MarkdownParse test file**: The test *failed* for line 62 of the test file. The details are as shown in the following screenshot.
+
+- **Reviewed MarkdownParse test file**: The test *failed* for line 218 of the test file. The details are as shown in the following screenshot.
