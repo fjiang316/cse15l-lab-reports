@@ -41,5 +41,26 @@ The test I designed for testing snippet 2 is the same for both repositories. It 
 ```
 ### Result of the Test
 - **My MarkdownParse test file**: The test *failed* for line 62 of the test file. The details are as shown in the following screenshot.
-
+![my test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20my%20test.png?raw=true)
 - **Reviewed MarkdownParse test file**: The test *failed* for line 218 of the test file. The details are as shown in the following screenshot.
+![reviewed test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20reviewed%20test.png?raw=true)
+
+## Snippet 3
+### Desired Output
+The snippet file should produce three valid links. The output should be as the following: `[https://www.twitter.com, https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule, https://cse.ucsd.edu/]`
+### Test Designed for Snippet 3
+The test I designed for testing snippet 3 is the same for both repositories. It is as following:
+```
+@Test
+    public void testSnippet3() throws IOException {
+        Path fileName = Path.of("Snippet3.md");
+        String content = Files.readString(fileName);
+        ArrayList<String> result = MarkdownParse.getLinks(content);
+        assertEquals(List.of("https://www.twitter.com", "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", "https://cse.ucsd.edu/"), result);
+    }
+```
+### Result of the Test
+- **My MarkdownParse test file**: The test *failed* for line 70 of the test file. The details are as shown in the following screenshot.
+![my test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20my%20test.png?raw=true)
+- **Reviewed MarkdownParse test file**: The test *failed* for line 218 of the test file. The details are as shown in the following screenshot.
+![reviewed test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20reviewed%20test.png?raw=true)
