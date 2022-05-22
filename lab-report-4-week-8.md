@@ -61,6 +61,16 @@ The test I designed for testing snippet 3 is the same for both repositories. It 
 ```
 ### Result of the Test
 - **My MarkdownParse test file**: The test *failed* for line 70 of the test file. The details are as shown in the following screenshot.
-![my test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20my%20test.png?raw=true)
-- **Reviewed MarkdownParse test file**: The test *failed* for line 218 of the test file. The details are as shown in the following screenshot.
-![reviewed test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet2%20reviewed%20test.png?raw=true)
+![my test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet3%20my%20test.png?raw=true)
+- **Reviewed MarkdownParse test file**: The test *failed* for line 234 of the test file. The details are as shown in the following screenshot.
+![reviewed test result](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport4%20snippet3%20reviewed%20test.png?raw=true)
+
+## Possible Fix for Snippet 1 (cases that use inline code with backticks)
+I don't think there's a small code change (<10 lines) that can solve this issue. 
+- This is because the only cases when this type of cases would work is: 
+    - when both backticks are within brakets or both within parenthesis
+    - or there's only one backtick. 
+- This would require us to first find the location of the first backtick, then the location of second (if any), and compare the index with openbracket, closebracket, openparen, closeparen.
+
+
+## Possible Fix for Snippet 2 (cases that nest parentheses, brackets, and escaped brackets)
