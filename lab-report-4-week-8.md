@@ -74,3 +74,18 @@ I don't think there's a small code change (<10 lines) that can solve this issue.
 
 
 ## Possible Fix for Snippet 2 (cases that nest parentheses, brackets, and escaped brackets)
+The fix would take more than 10 lines.
+- THis is because we need to address two types of issue:
+    - The first is the nested links (i.e. [[a link](link)](link)). This would require us to manually check the position of inner bracket and parenthesis, which takes about 10 lines.
+    - The second is the nested parenthesis. (i.e. after the bracket, the link is `a.com(())`). This would require a while loop to check if there's any nested parethesis after getting the substring.
+
+
+## Possible Fix for Snippet 3 (cases that have newlines in brackets and parentheses)
+The fix would take more than 10 lines. This is because there are 4 cases we need to check using a while loop inside the substring.
+
+- Check if there are any *empty space at the begining* of the substring, remove them if there's any.
+- Check if there's any *empty space at the back* of the substring, remove if any.
+- Check if there's any *new lines at the beginning* of the substring, remove it.
+- Check if there's any *new lines at the end* of the substring, remove it.
+
+These would take more than 10 lines.
