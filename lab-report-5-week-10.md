@@ -36,7 +36,7 @@ continue;}
 
 ## Behavior for File 2
 ### Correct implementation:
-My implementation returns the correct output (`[]`), while the provided implementation returns the wrong output(`[moon.jpg]`).
+Both implementation resulted in wrong output. My implementation returns the incorrect output (`[]`), and the provided implementation returns the wrong output(`[moon.jpg]`).
 
 ### Actual Outputs
 ![output 1](https://github.com/fjiang316/cse15l-lab-reports/blob/main/labreport%205.png?raw=true)
@@ -44,7 +44,7 @@ My implementation returns the correct output (`[]`), while the provided implemen
 ### Expected Output
 Content of file: `[![moon](moon.jpg)](/uri)`
 
-The expected output should be empty list (`[]`). This is because the link inside the bracket is an image link, therefore should not be a valid returned value for out getLink method.
+The expected output should be empty list (`[/uri]`). This is because the content inside the bracket (the image link) is not a valid link, but the outside bracket and the rightmost parenthesis follows the format of a valid link.
 
 ### Potential Fix
 After line 75 of the MarkdownParse.java file in the provided repository, which is right before the line where we add the substring to the toReturn, we should added there an if statement to check whether this link is a valid markdown link or an image. To do this, we should add:
